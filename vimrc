@@ -13,12 +13,29 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-surround'
-Plug 'jaredgorski/spacecamp'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'junegunn/seoul256.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+"for javascript
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :FZF<CR>
+map <C-p> :Prettier<CR>
 
-colorscheme spacecamp
+syntax on
+let g:seoul256_background = 233
+colorscheme seoul256
+
+let g:prettier#autoformat_require_pragma = 0
+
+"for javascript
+let g:javascript_plugin_jsdoc = 1
+
+
+
+
 
