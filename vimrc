@@ -36,9 +36,18 @@ let g:prettier#autoformat_require_pragma = 0
 let g:javascript_plugin_jsdoc = 1
 
 "for coc 
-let g:ycm_key_list_select_completion = ['<C-n>']
-let g:ycm_key_list_previous_completion=['<C-p>']
 let g:coc_disable_startup_warning = 1
 
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+"for bookmark
+highlight BookmarkSign ctermbg=NONE ctermfg=160
+highlight BookmarkLine ctermbg=100 ctermfg=NONE
+let g:bookmark_sign = '♥'
+let g:bookmark_highlight_lines = 1
 
 
+"for hjkl move on command mode
+cmap <C-k> <Up>
+cmap <C-j> <Down>
