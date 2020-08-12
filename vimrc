@@ -17,6 +17,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
 
 "for javascript
 Plug 'pangloss/vim-javascript'
@@ -54,6 +55,7 @@ cmap <C-j> <Down>
 cmap <C-h> <Left>
 cmap <C-l> <Right>
 map q <Nop>
+map <C-s> :w<CR>
 
 se nu
 set ts=4
@@ -61,6 +63,10 @@ set shiftwidth=4
 set autoindent 
 set expandtab
 
+map <C-]> :tabn<CR>
+map <C-[> :tabp<CR>
+
+"status bar
 let g:branchname = GitBranch()
 
 function! GitBranch()
