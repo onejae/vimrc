@@ -51,5 +51,12 @@ let g:bookmark_highlight_lines = 1
 "for hjkl move on command mode
 cmap <C-k> <Up>
 cmap <C-j> <Down>
+cmap <C-h> <Left>
+cmap <C-l> <Right>
+map q <Nop>
 
 se nu
+set ts=4
+set shiftwidth=4
+set autoindent 
+set expandtab
