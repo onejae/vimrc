@@ -17,6 +17,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
 
 "for javascript
 Plug 'pangloss/vim-javascript'
