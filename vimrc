@@ -13,7 +13,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-surround'
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'junegunn/seoul256.vim'
+Plug 'crusoexia/vim-monokai'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
@@ -28,8 +28,7 @@ map <C-f> :FZF<CR>
 map <C-p> :Prettier<CR>
 
 syntax on
-let g:seoul256_background = 233
-colorscheme seoul256
+colorscheme monokai
 
 let g:prettier#autoformat_require_pragma = 0
 
@@ -52,3 +51,5 @@ let g:bookmark_highlight_lines = 1
 "for hjkl move on command mode
 cmap <C-k> <Up>
 cmap <C-j> <Down>
+
+se nu
