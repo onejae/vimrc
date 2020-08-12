@@ -5,7 +5,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype indent off
 
 call plug#begin('~/.vim/plugged')
 
@@ -16,6 +16,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'junegunn/seoul256.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
 
 "for javascript
 Plug 'pangloss/vim-javascript'
