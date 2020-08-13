@@ -62,10 +62,15 @@ map <C-s> :w<CR>
 cnoremap SF<CR> :CtrlSF<CR>
 nnoremap <S-f> :CtrlSFToggle<CR>
 
+nmap <silent> <C-]> :tabn<CR>
+nmap <silent> <C-[> :tabp<CR>
+
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+nmap <ESC> <nop>
 
 se nu
 set ts=4
