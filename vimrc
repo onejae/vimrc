@@ -18,6 +18,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 "for javascript
 Plug 'pangloss/vim-javascript'
@@ -63,32 +65,14 @@ set shiftwidth=4
 set autoindent 
 set expandtab
 
-map <C-]> :tabn<CR>
-map <C-[> :tabp<CR>
-
-"status bar
-let g:branchname = GitBranch()
-
-function! GitBranch()
-    return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+function! AirlineInit()
+    let g:airline_section_a = airline#section#create(['mode'])
+    let g:airline_section_b = airline#section#create(['branch'])
+    let g:airline_section_x = ""
+    let g:airline_section_y = ""
+    let g:airline_section_z = "wonjae lee"
+    let g:airline_section_warning = ""
 endfunction
 
-function! StatuslineGit()
-    "let l:branchname = GitBranch()
-    return strlen(g:branchname) > 0?'  '.g:branchname.' ':''
-endfunction
 
-set statusline=
-set statusline+=%#PmenuSel#
-set statusline+=%{StatuslineGit()}
-set statusline+=%#LineNr#
-set statusline+=\ %f
-set statusline+=%m\
-set statusline+=%=
-set statusline+=%#CursorColumn#
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\[%{&fileformat}\]
-set statusline+=\ %p%%
-"set statusline+=\ %l:%c
-set statusline+=\ 
+autocmd VimEnter * call AirlineInit()
