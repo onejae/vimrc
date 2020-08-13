@@ -20,6 +20,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'dyng/ctrlsf.vim'
 
 "for javascript
 Plug 'pangloss/vim-javascript'
@@ -58,6 +59,9 @@ cmap <C-h> <Left>
 cmap <C-l> <Right>
 map q <Nop>
 map <C-s> :w<CR>
+cnoremap SF<CR> :CtrlSF<CR>
+nnoremap <S-f> :CtrlSFToggle<CR>
+
 
 se nu
 set ts=4
@@ -74,5 +78,5 @@ function! AirlineInit()
     let g:airline_section_warning = ""
 endfunction
 
-
 autocmd VimEnter * call AirlineInit()
+
