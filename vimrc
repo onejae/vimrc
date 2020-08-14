@@ -16,11 +16,12 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'crusoexia/vim-monokai'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dyng/ctrlsf.vim'
+Plug 'preservim/nerdcommenter'
 
 "for javascript
 Plug 'pangloss/vim-javascript'
@@ -30,6 +31,7 @@ call plug#end()
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :FZF<CR>
 map <C-p> :Prettier<CR>
+cmap tn<CR> tabnew<CR>
 
 syntax on
 colorscheme monokai
@@ -62,15 +64,33 @@ map <C-s> :w<CR>
 cnoremap SF<CR> :CtrlSF<CR>
 nnoremap <S-f> :CtrlSFToggle<CR>
 
-nmap <silent> <C-]> :tabn<CR>
-nmap <silent> <C-[> :tabp<CR>
+nnoremap <silent> <S-C-l> :tabn<CR>
+nnoremap <silent> <S-C-h> :tabp<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nmap <ESC> <nop>
+
+" NERD Commenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+nmap <C-_> <Plug>NERDCommenterToggle
+vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
 se nu
 set ts=4
@@ -89,3 +109,4 @@ endfunction
 
 autocmd VimEnter * call AirlineInit()
 
+set guifont=NanumGothicCoding
