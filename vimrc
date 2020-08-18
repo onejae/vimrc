@@ -16,7 +16,8 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'crusoexia/vim-monokai'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pair
+Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -109,4 +110,7 @@ endfunction
 
 autocmd VimEnter * call AirlineInit()
 
-set guifont=NanumGothicCoding
+set mouse=a
+
+"for vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
