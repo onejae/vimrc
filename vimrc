@@ -67,6 +67,8 @@ nnoremap <S-f> :CtrlSFToggle<CR>
 
 nnoremap <silent> <S-C-l> :tabn<CR>
 nnoremap <silent> <S-C-h> :tabp<CR>
+nnoremap <silent> <S-C-p> :vertical res +5<CR>
+nnoremap <silent> <S-C-o> :vertical res -5<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -112,6 +114,8 @@ endfunction
 autocmd VimEnter * call AirlineInit()
 
 set mouse=a
+set ignorecase
+
 
 "for vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
