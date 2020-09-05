@@ -6,6 +6,7 @@ endif
 
 set nocompatible              " be iMproved, required
 filetype indent off
+filetype plugin on
 
 call plug#begin('~/.vim/plugged')
 
@@ -25,6 +26,10 @@ Plug 'preservim/nerdcommenter'
 
 "for javascript
 Plug 'pangloss/vim-javascript'
+
+"for go
+Plug 'fatih/vim-go'
+Plug 'puremourning/vimspector'
 
 call plug#end()
 
@@ -110,3 +115,9 @@ endfunction
 autocmd VimEnter * call AirlineInit()
 
 set guifont=NanumGothicCoding
+
+"for vimspector
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+set mouse=a
+nmap <S-F5> :call vimspector#Reset()<CR>
+
