@@ -17,7 +17,8 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'crusoexia/vim-monokai'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pair
+Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -67,15 +68,20 @@ cmap <C-l> <Right>
 map q <Nop>
 map <C-s> :w<CR>
 cnoremap SF<CR> :CtrlSF<CR>
-nnoremap <S-f> :CtrlSFToggle<CR>
+nmap     <S-F>t :CtrlSFToggle<CR>
+nmap     <S-F>n <Plug>CtrlSFCwordPath
+nmap     <S-F>p <Plug>CtrlSFPwordPath
 
-nnoremap <silent> <S-C-l> :tabn<CR>
-nnoremap <silent> <S-C-h> :tabp<CR>
+nnoremap <silent> <C-l> :tabn<CR>
+nnoremap <silent> <C-h> :tabp<CR>
+nnoremap <silent> <C-right> :vertical res +5<CR>
+nnoremap <silent> <C-left> :vertical res -5<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <TAB> <C-w>w
 
 
 " NERD Commenter
@@ -121,3 +127,4 @@ let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 set mouse=a
 nmap <S-F5> :call vimspector#Reset()<CR>
 
+set ignorecase
