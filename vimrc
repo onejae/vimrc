@@ -101,7 +101,7 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 
 nmap <C-_> <Plug>NERDCommenterToggle
-vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
+vmap <C-_> <Plug>NERDCommenterToggle<CR>
 
 se nu
 set ts=4
@@ -122,7 +122,6 @@ autocmd VimEnter * call AirlineInit()
 
 set guifont=NanumGothicCoding
 
-"for vimspector
 let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 set mouse=a
 nmap <S-F5> :call vimspector#Reset()<CR>
