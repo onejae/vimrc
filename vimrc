@@ -16,7 +16,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'crusoexia/vim-monokai'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'jiangmiao/auto-pair
+Plug 'jiangmiao/auto-pairs'
 Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
