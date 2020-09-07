@@ -44,6 +44,10 @@ colorscheme monokai
 
 let g:prettier#autoformat_require_pragma = 0
 
+"for golang
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 "for javascript
 let g:javascript_plugin_jsdoc = 1
 
@@ -72,10 +76,17 @@ nmap     <S-F>t :CtrlSFToggle<CR>
 nmap     <S-F>n <Plug>CtrlSFCwordPath
 nmap     <S-F>p <Plug>CtrlSFPwordPath
 
+
+nmap <C-J> :bprevious<CR> 
+nmap <C-K> :bnext<CR> 
+
+
 nnoremap <silent> <C-l> :tabn<CR>
 nnoremap <silent> <C-h> :tabp<CR>
 nnoremap <silent> <C-right> :vertical res +5<CR>
 nnoremap <silent> <C-left> :vertical res -5<CR>
+nnoremap <silent> <C-up> :res +5<CR>
+nnoremap <silent> <C-down> :res -5<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
