@@ -34,6 +34,7 @@ Plug 'puremourning/vimspector'
 
 call plug#end()
 
+nmap ,n :NERDTreeFind<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :FZF<CR>
 map <C-p> :Prettier<CR>
