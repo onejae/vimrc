@@ -36,7 +36,7 @@ call plug#end()
 
 nmap ,n :NERDTreeFind<CR>
 map <C-n> :NERDTreeToggle<CR>
-map <C-f> :FZF<CR>
+map ,f :FZF<CR>
 map <C-p> :Prettier<CR>
 cmap tn<CR> tabnew<CR>
 
