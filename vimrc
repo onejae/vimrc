@@ -34,9 +34,8 @@ Plug 'puremourning/vimspector'
 
 call plug#end()
 
-nmap ,n :NERDTreeFind<CR>
 nmap ,c :CtrlSF<space>
-map <C-n> :NERDTreeToggle<CR>
+map ,n :NERDTreeToggle<CR>
 map ,f :FZF<CR>
 map <C-p> :Prettier<CR>
 cmap tn<CR> tabnew<CR>
@@ -140,3 +139,5 @@ set mouse=a
 nmap <S-F5> :call vimspector#Reset()<CR>
 
 set ignorecase
+set noswapfile
+
