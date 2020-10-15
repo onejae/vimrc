@@ -143,5 +143,5 @@ set mouse=a
 nmap <S-F5> :call vimspector#Reset()<CR>
 
 set ignorecase
-
+set noswapfile
 
