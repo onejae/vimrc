@@ -11,7 +11,8 @@ filetype plugin on
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle']  }   
+Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeTabsToggle'  }
 Plug 'tpope/vim-surround'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'crusoexia/vim-monokai'
@@ -35,7 +36,9 @@ Plug 'puremourning/vimspector'
 call plug#end()
 
 nmap ,c :CtrlSF<space>
-map ,n :NERDTreeToggle<CR>
+map ,n :NERDTreeTabsToggle<CR>
+
+
 map ,f :FZF<CR>
 map <C-p> :Prettier<CR>
 cmap tn<CR> tabnew<CR>
@@ -140,4 +143,6 @@ nmap <S-F5> :call vimspector#Reset()<CR>
 
 set ignorecase
 set noswapfile
+
+let g:nerdtree_tabs_open_on_console_startup=1
 
