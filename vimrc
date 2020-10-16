@@ -29,6 +29,10 @@ Plug 'preservim/nerdcommenter'
 "for javascript
 Plug 'pangloss/vim-javascript'
 
+"for ts
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
 "for go
 Plug 'fatih/vim-go'
 Plug 'puremourning/vimspector'
