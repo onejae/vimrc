@@ -121,12 +121,16 @@ let g:NERDTrimTrailingWhitespace = 1
 
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>
+map ,r :NERDTreeFind<cr>
+
 
 se nu
+se rnu
 set ts=4
 set shiftwidth=4
 set autoindent 
 set expandtab
+
 
 function! AirlineInit()
     let g:airline_section_a = airline#section#create(['mode'])
