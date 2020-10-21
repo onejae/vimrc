@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dyng/ctrlsf.vim'
 Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-vinegar'
 
 "for javascript
 Plug 'pangloss/vim-javascript'
