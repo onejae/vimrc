@@ -92,10 +92,10 @@ nmap <C-K> :bnext<CR>
 
 nnoremap <silent> <C-l> :tabn<CR>
 nnoremap <silent> <C-h> :tabp<CR>
-nnoremap <silent> <C-right> :vertical res +5<CR>
-nnoremap <silent> <C-left> :vertical res -5<CR>
-nnoremap <silent> <C-up> :res +5<CR>
-nnoremap <silent> <C-down> :res -5<CR>
+" nnoremap <silent> <C-0> :vertical res +5<CR>
+" nnoremap <silent> <C-left> :vertical res -5<CR>
+" nnoremap <silent> <C-up> :res +5<CR>
+" nnoremap <silent> <C-down> :res -5<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
