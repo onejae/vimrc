@@ -66,6 +66,9 @@ let g:coc_disable_startup_warning = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+nnoremap <C-h> :vertical res +5<CR>
+nnoremap <C-g> :vertical res -5<CR>
+
 "for bookmark
 highlight BookmarkSign ctermbg=NONE ctermfg=160
 highlight BookmarkLine ctermbg=20 ctermfg=NONE
@@ -85,17 +88,8 @@ nmap     <S-F>t :CtrlSFToggle<CR>
 nmap     <S-F>n <Plug>CtrlSFCwordPath
 nmap     <S-F>p <Plug>CtrlSFPwordPath
 
-
-nmap <C-J> :bprevious<CR> 
-nmap <C-K> :bnext<CR> 
-
-
-nnoremap <silent> <C-l> :tabn<CR>
-nnoremap <silent> <C-h> :tabp<CR>
-" nnoremap <silent> <C-0> :vertical res +5<CR>
-" nnoremap <silent> <C-left> :vertical res -5<CR>
-" nnoremap <silent> <C-up> :res +5<CR>
-" nnoremap <silent> <C-down> :res -5<CR>
+nnoremap <silent> <C-k> :tabn<CR>
+nnoremap <silent> <C-j> :tabp<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -126,7 +120,6 @@ map ,r :NERDTreeFind<cr>
 
 
 se nu
-se rnu
 set ts=4
 set shiftwidth=4
 set autoindent 
@@ -154,4 +147,9 @@ set ignorecase
 set noswapfile
 
 let g:nerdtree_tabs_open_on_console_startup=1
+
+# for tabbar
+hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
+hi TabLine ctermfg=Blue ctermbg=Black
+hi TabLineSel ctermfg=Red ctermbg=Yellow
 
