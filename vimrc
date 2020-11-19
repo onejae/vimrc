@@ -148,8 +148,11 @@ set noswapfile
 
 let g:nerdtree_tabs_open_on_console_startup=1
 
-# for tabbar
+" for tabbar
 hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
 hi TabLine ctermfg=Blue ctermbg=Black
 hi TabLineSel ctermfg=Red ctermbg=Yellow
+
+" for CocFloat
+hi CocErrorFloat ctermfg=White
 
