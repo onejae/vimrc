@@ -16,7 +16,7 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeTabsToggle'  }
 Plug 'tpope/vim-surround'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'crusoexia/vim-monokai'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'puremourning/vimspector'
@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dyng/ctrlsf.vim'
 Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-vinegar'
 
 "for javascript
 Plug 'pangloss/vim-javascript'
@@ -41,7 +42,7 @@ call plug#end()
 
 nmap ,c :CtrlSF<space>
 map ,n :NERDTreeTabsToggle<CR>
-
+map ,r :NERDTreeFind<CR>
 
 map ,f :FZF<CR>
 map <C-p> :Prettier<CR>
@@ -93,8 +94,8 @@ nnoremap <silent> <C-l> :tabn<CR>
 nnoremap <silent> <C-h> :tabp<CR>
 nnoremap <silent> <C-right> :vertical res +5<CR>
 nnoremap <silent> <C-left> :vertical res -5<CR>
-nnoremap <silent> <C-up> :res +5<CR>
-nnoremap <silent> <C-down> :res -5<CR>
+nnoremap <silent> <C-up> :res +1<CR>
+nnoremap <silent> <C-down> :res -1<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -127,6 +128,7 @@ set ts=4
 set shiftwidth=4
 set autoindent 
 set expandtab
+set paste
 
 function! AirlineInit()
     let g:airline_section_a = airline#section#create(['mode'])
@@ -149,4 +151,9 @@ set ignorecase
 set noswapfile
 
 let g:nerdtree_tabs_open_on_console_startup=1
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat = 1
+
+let g:ctrlsf_backend = 'rg'
+
 
