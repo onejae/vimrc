@@ -66,6 +66,9 @@ let g:coc_disable_startup_warning = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+nnoremap <C-h> :vertical res +5<CR>
+nnoremap <C-g> :vertical res -5<CR>
+
 "for bookmark
 highlight BookmarkSign ctermbg=NONE ctermfg=160
 highlight BookmarkLine ctermbg=20 ctermfg=NONE
@@ -122,6 +125,8 @@ let g:NERDTrimTrailingWhitespace = 1
 
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>
+map ,r :NERDTreeFind<cr>
+
 
 se nu
 set ts=4
@@ -129,6 +134,7 @@ set shiftwidth=4
 set autoindent 
 set expandtab
 set paste
+
 
 function! AirlineInit()
     let g:airline_section_a = airline#section#create(['mode'])
@@ -156,4 +162,12 @@ let g:prettier#autoformat = 1
 
 let g:ctrlsf_backend = 'rg'
 
+
+" for tabbar
+hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
+hi TabLine ctermfg=Blue ctermbg=Black
+hi TabLineSel ctermfg=Red ctermbg=Yellow
+
+" for CocFloat
+hi CocErrorFloat ctermfg=White
 
