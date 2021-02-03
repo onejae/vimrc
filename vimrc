@@ -14,11 +14,11 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle']  }   
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeTabsToggle'  }
 Plug 'tpope/vim-surround'
-Plug 'MattesGroeger/vim-bookmarks'
+" Plug 'MattesGroeger/vim-bookmarks'
 Plug 'crusoexia/vim-monokai'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -70,10 +70,10 @@ nnoremap <C-h> :vertical res +5<CR>
 nnoremap <C-g> :vertical res -5<CR>
 
 "for bookmark
-highlight BookmarkSign ctermbg=NONE ctermfg=160
-highlight BookmarkLine ctermbg=20 ctermfg=NONE
-let g:bookmark_sign = '♥'
-let g:bookmark_highlight_lines = 1
+" highlight BookmarkSign ctermbg=NONE ctermfg=160
+" highlight BookmarkLine ctermbg=20 ctermfg=NONE
+" let g:bookmark_sign = '♥'
+" let g:bookmark_highlight_lines = 1
 
 
 "for hjkl move on command mode
@@ -149,9 +149,9 @@ set noswapfile
 let g:nerdtree_tabs_open_on_console_startup=1
 
 " for tabbar
-hi TabLineFill ctermfg=LightGreen ctermbg=DarkGreen
+hi TabLineFill ctermfg=Black ctermbg=Black
 hi TabLine ctermfg=Blue ctermbg=Black
-hi TabLineSel ctermfg=Red ctermbg=Yellow
+hi TabLineSel ctermfg=Red ctermbg=White
 
 " for CocFloat
 hi CocErrorFloat ctermfg=White
