@@ -129,11 +129,10 @@ map ,r :NERDTreeFind<cr>
 
 
 se nu
-set ts=4
+set ts=2
 set shiftwidth=4
 set autoindent 
 set expandtab
-set paste
 
 
 function! AirlineInit()
