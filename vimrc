@@ -133,6 +133,7 @@ set ts=2
 set shiftwidth=4
 set autoindent 
 set expandtab
+set belloff=all
 
 
 function! AirlineInit()
