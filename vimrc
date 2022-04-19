@@ -14,12 +14,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle']  }   
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  'NERDTreeTabsToggle'  }
 Plug 'tpope/vim-surround'
-" Plug 'MattesGroeger/vim-bookmarks'
 Plug 'crusoexia/vim-monokai'
+Plug 'morhetz/gruvbox'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'jiangmiao/auto-pairs'
-Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -36,7 +34,6 @@ Plug 'peitalin/vim-jsx-typescript'
 
 "for go
 Plug 'fatih/vim-go'
-Plug 'puremourning/vimspector'
 
 call plug#end()
 
@@ -49,7 +46,13 @@ map <C-p> :Prettier<CR>
 cmap tn<CR> tabnew<CR>
 
 syntax on
-colorscheme monokai
+set background=dark
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_termcolors=256
+
+highlight Normal ctermbg=black ctermfg=white
+
+colorscheme gruvbox
 
 let g:prettier#autoformat_require_pragma = 0
 
@@ -149,9 +152,7 @@ autocmd VimEnter * call AirlineInit()
 
 set guifont=NanumGothicCoding
 
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 set mouse=a
-nmap <S-F5> :call vimspector#Reset()<CR>
 
 set ignorecase
 set noswapfile
@@ -161,7 +162,6 @@ let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat = 1
 
 let g:ctrlsf_backend = 'rg'
-
 
 " for tabbar
 hi TabLineFill ctermfg=Black ctermbg=Black
