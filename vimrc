@@ -35,6 +35,10 @@ Plug 'peitalin/vim-jsx-typescript'
 "for go
 Plug 'fatih/vim-go'
 
+"md file preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+
 call plug#end()
 
 nmap ,c :CtrlSF<space>
